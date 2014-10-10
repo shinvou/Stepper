@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = StepperSettings;
+		cell = PSLinkCell;
+		detail = "StepperSettingsListController";
+		icon = "StepperSettings@2x.png";
+		isController = 1;
+		label = Stepper;
+	};
+}

@@ -1,0 +1,9 @@
+Package: com.shinvou.stepper
+Name: Stepper
+Depends: mobilesubstrate, cc.tweak.libobjcipc, libhide, preferenceloader
+Architecture: iphoneos-arm
+Description: Stepper. Vrooom!
+Author: Timm Kandziora
+Section: Tweaks
+Version: 1.1-2
+Installed-Size: 376

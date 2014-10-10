@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>cellClass</key>
+			<string>StepperBanner</string>
+			<key>height</key>
+			<string>205</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Steps on lockscreen</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>showLabel</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>showSlider</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>label</key>
+			<string>Replace &apos;slide to unlock&apos;</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Steps on Statusbar</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>showStatusBar</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>label</key>
+			<string>Enabled</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>statusbarSeperator</string>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>placeholder</key>
+			<string>Enter some special character ...</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Customize appearance</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Customize Stepper&apos;s appearance</string>
+			<key>enabled</key>
+			<true/>
+			<key>detail</key>
+			<string>StepperCustomizationListController</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Refresh interval</string>
+			<key>footerText</key>
+			<string>Your device will respring if you change the refresh interval.</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>default</key>
+			<string>300.0</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>refreshInterval</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Set refresh interval</string>
+			<key>validTitles</key>
+			<array>
+				<string>Real time</string>
+				<string>1 minute</string>
+				<string>2 minutes</string>
+				<string>3 minutes</string>
+				<string>5 minutes</string>
+				<string>10 minutes</string>
+				<string>15 minutes</string>
+				<string>20 minutes</string>
+				<string>30 minutes</string>
+				<string>45 minutes</string>
+				<string>60 minutes</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>5.0</string>
+				<string>60.0</string>
+				<string>120.0</string>
+				<string>180.0</string>
+				<string>300.0</string>
+				<string>600.0</string>
+				<string>900.0</string>
+				<string>1200.0</string>
+				<string>1800.0</string>
+				<string>2700.0</string>
+				<string>3600.0</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Time interval</string>
+			<key>footerText</key>
+			<string>Choose a time period of which the steps should get fetched from.</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>default</key>
+			<string>0</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>timeInterval</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Set time interval</string>
+			<key>validTitles</key>
+			<array>
+				<string>Today</string>
+				<string>Today and yesterday</string>
+				<string>Today and last two days</string>
+				<string>Today and last three days</string>
+				<string>Today and last four days</string>
+				<string>Today and last five days</string>
+				<string>Today and last six days</string>
+				<string>Today and last seven days</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Contact developer</string>
+			<key>footerText</key>
+			<string>Feel free to follow me on twitter for any updates on my apps and tweaks or contact me for support questions. 
+
+This tweak is Open-Source, so make sure to check out my GitHub.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>action</key>
+			<string>openTwitter</string>
+			<key>icon</key>
+			<string>twitter@2x.png</string>
+			<key>label</key>
+			<string>@biscoditch</string>
+			<key>enabled</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>action</key>
+			<string>openGithub</string>
+			<key>icon</key>
+			<string>github@2x.png</string>
+			<key>label</key>
+			<string>https://github.com/shinvou</string>
+			<key>enabled</key>
+			<true/>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Stepper</string>
+</dict>
+</plist>

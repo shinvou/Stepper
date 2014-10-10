@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>X-Coordinate</string>
+			<key>footerText</key>
+			<string>Set the X-Coordinate for the label on the lockscreen.
+
+Number gets rounded down to the nearest whole number.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>320</integer>
+			<key>showValue</key>
+			<true/>
+			<key>default</key>
+			<string>5</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>x</string>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Y-Coordinate</string>
+			<key>footerText</key>
+			<string>Set the Y-Coordinate for the label on the lockscreen.
+
+Number gets rounded down to the nearest whole number.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>568</integer>
+			<key>showValue</key>
+			<true/>
+			<key>default</key>
+			<string>110</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>y</string>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Text size</string>
+			<key>footerText</key>
+			<string>Choose the text size for the label on the lock screen.
+
+Number gets rounded down to the nearest whole number.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>min</key>
+			<integer>1</integer>
+			<key>max</key>
+			<integer>100</integer>
+			<key>showValue</key>
+			<true/>
+			<key>default</key>
+			<string>17</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>textSize</string>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Bubble radius</string>
+			<key>footerText</key>
+			<string>Choose the radius for the bubble on the lockscreen.
+
+Number gets rounded down to the nearest whole number.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>min</key>
+			<integer>0</integer>
+			<key>max</key>
+			<integer>200</integer>
+			<key>showValue</key>
+			<true/>
+			<key>default</key>
+			<string>55</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>bubbleRadius</string>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Choose colors</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>default</key>
+			<string>3</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>textColor</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Choose text color</string>
+			<key>validTitles</key>
+			<array>
+				<string>Black Color</string>
+				<string>Dark Gray Color</string>
+				<string>Light Gray Color</string>
+				<string>White Color</string>
+				<string>Gray Color</string>
+				<string>Red Color</string>
+				<string>Green Color</string>
+				<string>Blue Color</string>
+				<string>Cyan Color</string>
+				<string>Yellow Color</string>
+				<string>Magenta Color</string>
+				<string>Orange Color</string>
+				<string>Purple Color</string>
+				<string>Brown Color</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+			</array>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.shinvou.stepper/reloadSettings</string>
+			<key>default</key>
+			<string>0</string>
+			<key>defaults</key>
+			<string>com.shinvou.stepper</string>
+			<key>key</key>
+			<string>bubbleColor</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>label</key>
+			<string>Choose bubble color</string>
+			<key>validTitles</key>
+			<array>
+				<string>Black Color</string>
+				<string>Dark Gray Color</string>
+				<string>Light Gray Color</string>
+				<string>White Color</string>
+				<string>Gray Color</string>
+				<string>Red Color</string>
+				<string>Green Color</string>
+				<string>Blue Color</string>
+				<string>Cyan Color</string>
+				<string>Yellow Color</string>
+				<string>Magenta Color</string>
+				<string>Orange Color</string>
+				<string>Purple Color</string>
+				<string>Brown Color</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+				<string>3</string>
+				<string>4</string>
+				<string>5</string>
+				<string>6</string>
+				<string>7</string>
+				<string>8</string>
+				<string>9</string>
+				<string>10</string>
+				<string>11</string>
+				<string>12</string>
+				<string>13</string>
+			</array>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Customization</string>
+</dict>
+</plist>
