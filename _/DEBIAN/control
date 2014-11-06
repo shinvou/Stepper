@@ -5,5 +5,5 @@ Architecture: iphoneos-arm
 Description: Stepper. Vrooom!
 Author: Timm Kandziora
 Section: Tweaks
-Version: 1.1-2
+Version: 1.1-3
 Installed-Size: 376

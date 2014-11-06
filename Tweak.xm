@@ -15,6 +15,7 @@ static BOOL launched = NO;
 static BOOL showLabel = YES;
 static BOOL showSlider = YES;
 static BOOL showStatusBar = YES;
+static BOOL isPlaying = NO;
 
 static int mode = 0;
 
@@ -245,25 +246,28 @@ static void ReloadSettings()
 
 - (void)layoutSubviews
 {
-	if (showLabel) {
-		UIView *view = MSHookIvar<UIView *>(self,"_notificationView");
+	if (!isPlaying) {
+		if (showLabel) {
+			UIView *view = MSHookIvar<UIView *>(self,"_notificationView");
 
-		if (!label) {
-			label = [[UILabel alloc] initWithFrame:CGRectMake(xcoordinate, ycoordinate, bubbleradius, bubbleradius)];
-			label.numberOfLines = 1;
-			label.textAlignment = NSTextAlignmentCenter;
-			label.textColor = getColorForNumber(textColor);
-			label.backgroundColor = getColorForNumber(bubbleColor);
-			label.clipsToBounds = YES;
-			label.layer.cornerRadius = bubbleradius / 2.0;
+			if (!label) {
+				label = [[UILabel alloc] initWithFrame:CGRectMake(xcoordinate, ycoordinate, bubbleradius, bubbleradius)];
+				label.numberOfLines = 1;
+				label.textAlignment = NSTextAlignmentCenter;
+				label.textColor = getColorForNumber(textColor);
+				label.backgroundColor = getColorForNumber(bubbleColor);
+				label.clipsToBounds = YES;
+				label.layer.cornerRadius = bubbleradius / 2.0;
+				label.tag = 1337;
+			}
+
+			if (![label superview] || [label superview] != view) {
+				[view addSubview:label];
+			}
+
+			label.text = [NSString stringWithFormat:@"%@", stepCount];
+			label.font = [UIFont systemFontOfSize:textSize];
 		}
-
-		if (![label superview] || [label superview] != view) {
-			[view addSubview:label];
-		}
-
-		label.text = [NSString stringWithFormat:@"%@", stepCount];
-		label.font = [UIFont systemFontOfSize:textSize];
 	}
 
 	%orig;
@@ -279,6 +283,26 @@ static void ReloadSettings()
 
 	if (showStatusBar) {
 		SetStatusBarText();
+	}
+}
+
+%end
+
+%hook SBApplication
+
+- (void)setNowPlayingWithAudio:(BOOL)audio
+{
+	%orig;
+
+	if (audio) {
+		isPlaying = YES;
+
+		UIView *notificationView = MSHookIvar<UIView *>(lv,"_notificationView");
+
+		UILabel *lockscreenLabel = (UILabel *)[notificationView viewWithTag:1337];
+		[lockscreenLabel removeFromSuperview];
+	} else {
+		isPlaying = NO;
 	}
 }
 

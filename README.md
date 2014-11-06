@@ -27,6 +27,3 @@ Otherwise, feel free to follow me on twitter: [@biscoditch](https:///www.twitter
 
 ### Special Thanks
 /
-
-### TODO
-- Hide label on lockscreen when music starts playing/is playing
